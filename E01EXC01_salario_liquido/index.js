@@ -15,20 +15,25 @@
 // Faça o usuário digitar as informações necessárias
 // Exiba a mensagem tanto no console quanto no browser
 
-let date = new Date();
+
 const prompt = require("prompt-sync")();
 
 console.log("\n")
 
-const nome = prompt("Qual é o seu nome? ")
-const anoContratado = parseFloat(prompt("Em que ano você foi contratado? "));
-const salarioBruto = parseFloat(prompt("Quanto você ganha de Salário Bruto? "));
-const gratificacao = parseFloat(prompt("Quanto você ganha de gratificação? "));
-const desconto = parseFloat(prompt("Quanto você ganha de desconto? "));
+var nome = prompt("Qual é o seu nome? ")
 
-const salarioLiquido = (salarioBruto + gratificacao - desconto) * 1.20 + (date.getFullYear() - anoContratado) * 150
-const salarioLiquidoFormatado = salarioLiquido.toFixed(2)
+var anoContratado = parseFloat(prompt("Em que ano você foi contratado? "));
+var salarioBruto = parseFloat(prompt("Quanto você ganha de Salário Bruto? "));
+var gratificacao = parseFloat(prompt("Quanto você ganha de gratificação? "));
+var desconto = parseFloat(prompt("Quanto você ganha de desconto? "));
 
-console.log("\nO(a) funcionario(a) " + nome + " recebe um salário líquido de R$ " + salarioLiquidoFormatado)
+const anoAtual = new Date().getFullYear();
+const indice = 1.20;
+const taxaAdministrativa = 150;
+
+var salarioLiquido = (salarioBruto + gratificacao - desconto) * indice + (anoAtual - anoContratado) * taxaAdministrativa
+var salarioLiquidoFormatado = salarioLiquido.toFixed(2)
+
+console.log("\nO(a) funcionario(a) " + nome + " recebe um salário líquido de R$ " + salarioLiquidoFormatado + ".")
 
 console.log("\n")
