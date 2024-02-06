@@ -15,6 +15,8 @@
 // Faça o usuário digitar as informações necessárias
 // Exiba a mensagem tanto no console quanto no browser
 
+// OBS: Nessa primeira tentativa eu fiz o exercicio pelo node.js. Nesse caso a minha visualização era somente pelo console.
+
 
 const prompt = require("prompt-sync")();
 
