@@ -1,4 +1,4 @@
-// Etapa 02 - Atividade 01 - Programação Web com JavaScript I
+// // Exercício 01 - Etapa 01 - 02 - Programação Web com JavaScript I
 
 // Desenvolva uma solução em JavaScript que implemente a seguinte questão:
 
@@ -15,9 +15,12 @@
 // Faça o usuário digitar as informações necessárias
 // Exiba a mensagem tanto no console quanto no browser
 
-// OBS: Após a correção da aula, percebi que fui além do necessário, que eu poderia ter feito a atividade pelo próprio javascript, com as entradas aparecendo pelo HTML. 
+// OBS: Nessa primeira tentativa eu fiz o exercicio pelo node.js. Nesse caso a minha visualização era somente pelo console.
 
-// Segue abaixo a resolução aonde o usuário responde pelos pop-ups que aparecem na tela e que a resposta final aparece por um Alert();
+
+const prompt = require("prompt-sync")();
+
+console.log("\n")
 
 var nome = prompt("Qual é o seu nome? ")
 
@@ -33,4 +36,6 @@ const taxaAdministrativa = 150;
 var salarioLiquido = (salarioBruto + gratificacao - desconto) * indice + (anoAtual - anoContratado) * taxaAdministrativa
 var salarioLiquidoFormatado = salarioLiquido.toFixed(2)
 
-alert("O(a) funcionario(a) " + nome + " recebe um salário líquido de R$ " + salarioLiquidoFormatado + ".")
+console.log("\nO(a) funcionario(a) " + nome + " recebe um salário líquido de R$ " + salarioLiquidoFormatado + ".")
+
+console.log("\n")

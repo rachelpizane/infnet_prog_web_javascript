@@ -1,0 +1,80 @@
+<!-- 
+    Exercício 02 - Etapa 02 - 03 - Programação Web com JavaScript I
+    
+    1. Crie um formulário com os campos: Nome, Ano de Contratação, Salário Bruto, Gratificação e Desconto.
+    2. Crie um botão que ao ser clicado, calcule o salário líquido do funcionário.
+    3. O salário líquido é calculado da seguinte forma:
+    4. Salário Líquido = (Salário Bruto + Gratificação - Desconto) * 1.20 + (Ano Atual - Ano de Contratação) * 150
+    5. Exiba o resultado em um campo de texto somente leitura.
+    6. O campo de texto deve exibir a mensagem: "O salário líquido do(a) [Nome] é de R$ [Salário Líquido]." 
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <article class="form">
+        <h1 class="title-form">Simulação de Salário Líquido</h1>
+        <form class="main-form">
+            <div class="topic-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" class="form-input" placeholder="Escreve o seu nome">
+            </div>
+
+            <div class="topic-form">
+                <label for="">Ano de Contratação: </label>
+                <input type="number" id="anoContratado" class="form-input" placeholder="Escreve o ano em que foi contratado">
+            </div>
+
+            <div class="topic-form">
+                <label for="">Salário Bruto: </label>
+                <input type="number" id="salarioBruto" class="form-input" placeholder="Escreva quanto você ganha de salário bruto">
+            </div>
+
+            <div class="topic-form">
+                <label for="">Gratifcação: </label>
+                <input type="number" id="gratificacao" class="form-input" placeholder="Escreva quanto você ganha de gratificação">
+            </div>
+
+            <div class="topic-form">
+                <label for="">Desconto: </label>
+                <input type="number" id="desconto" class="form-input" placeholder="Escreva quanto você tem de desconto">
+            </div>
+
+            <input type="button" class="topic-button" value="Calcular Salário Liquido" onclick="calcular()">
+
+            <div class="topic-form">
+                <label> Resultado: </label>
+                <input type="text" id="resultado" class="form-input" readonly>
+            </div>
+        </form>
+    </article>
+
+    <script>
+        function calcular() {
+            let name = document.getElementById("name").value;
+            let anoContratado = parseFloat(document.getElementById("anoContratado").value);
+            let salarioBruto = parseFloat(document.getElementById("salarioBruto").value);
+            let gratificacao = parseFloat(document.getElementById("gratificacao").value);
+            let desconto = parseFloat(document.getElementById("desconto").value);
+
+            const anoAtual = new Date().getFullYear();
+            const indice = 1.20;
+            const taxaAdministrativa = 150;
+
+            let salarioLiquido = ((salarioBruto + gratificacao - desconto) * indice + (anoAtual - anoContratado) * taxaAdministrativa).toFixed(2);
+
+            let mensagem = "O salário líquido do(a) " + name + " é de R$ " + salarioLiquido + ".";
+
+            document.getElementById("resultado").value = mensagem;
+        }
+    </script>
+</body>
+
+</html>

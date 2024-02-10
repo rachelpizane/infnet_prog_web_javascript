@@ -1,2 +1,5 @@
-# Infnet | Web Programming with Javascript
- Exercises from the Infnet institute in the Web Programming with Javascript discipline
+# 🔹 Programação Web com Javascipt I | Infnet
+
+Exercícios da disciplina "Programação Web com Javascript I" do Instituto Infnet.
+
+**Status**: Andamento
