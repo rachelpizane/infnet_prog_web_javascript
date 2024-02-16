@@ -10,6 +10,7 @@ body {
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(to bottom, #e9e9fa 0%, #bbbbca 100%);
+  box-sizing: border-box;
 }
 
 .form {
