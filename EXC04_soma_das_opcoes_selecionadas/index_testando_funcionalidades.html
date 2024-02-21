@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Titulo Principal</h1>
+    <h1>Titulo Principal 2</h1>
+    <p id="para">Primeira tentativa</p>
+    <button id="btn">Click me</button>
+
+
+
+    <script>
+        let btn = document.querySelector("#btn");
+        console.log(btn);
+
+        btn.addEventListener("click", function () {
+            let changeColor = document.querySelector("h1");  //querySelector retorna o primeiro elemento que encontrar
+            changeColor.style.color = "blue";
+            let arrayElement = document.querySelectorAll("h1").length; //querySelectorAll retorna um array com todos os elementos que encontrar. 
+            // .length retorna o tamanho do array;
+            // array é uma coleção de elementos que podem ser acessados por um índice numérico (começando em 0).
+            alert(arrayElement)
+            let changeValue = document.getElementById("para").innerText; //innerText retorna o texto do elemento selecionado;
+            changeValue = "Segunda tentativa";
+            console.log(changeValue);
+        });
+
+    </script>
+</body>
+
+</html>
