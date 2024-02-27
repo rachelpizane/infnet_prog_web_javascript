@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Maioridade</title>
+</head>
+
+<body>
+    <div class="card_form">
+
+        <h1>Verificação de Maioridade</h1>
+        
+        <p>Escreva um programa em javaScript que solicita a idade do usuário e verifica se ele é maior de idade (idade igual ou superior a 18 anos).</p>
+        <form class="main_form">
+            <div class="topic-form">
+                <label>Qual é a sua idade?</label>
+                <input type="number" placeholder="Escreva a sua idade" id="idade" class="form-input">
+            </div>
+            <input id="button" type="button" class="button" value="Resposta">
+            <div class="topic-form">
+                <label>Resultado: </label>
+                <input type="text" id="resultado" class="form-input" readonly>
+            </div>
+        </form>
+        
+    </div>
+
+    <script>
+        let button = document.getElementById("button");
+
+        button.addEventListener("click", function calcularMaioridade() {
+            let idade = Number(document.getElementById("idade").value);
+            let resposta;
+
+            if (idade >= 18){
+                resposta = "Como o usuário tem " + idade + " anos. Ele é maior de idade."
+            } else {
+                resposta = "Como o usuário tem " + idade + " anos. Ele não é maior de idade."
+            }
+
+            let resultado = document.getElementById("resultado");
+            resultado.value = resposta;
+        })
+    </script>
+</body>
+
+</html>

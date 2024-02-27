@@ -1,4 +1,66 @@
-html {
-  height: 100%;
-  width: 100%;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  /* border: 1px solid grey; */
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: whitesmoke;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  color: #313131;
+}
+
+.card_form {
+  display: grid;
+  gap: 1rem;
+  background-color: white;
+  margin: 2rem;
+  padding: 2rem;
+  max-width: 60ch;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 10px 1px #d1d1d1;
+}
+
+.main_form {
+  display: grid;
+  gap: 1rem;
+}
+
+.topic-form {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.form-input {
+  padding: 0.5rem;
+  border: 1px solid #757575;
+  width: 200px;
+}
+
+.form-input:not(#resultado):focus {
+  box-shadow: 0px 0px 10px #b3b1b1;
+  outline: none;
+}
+
+#resultado {
+  background-color: #e0e0e0;
+  color: #494848;
+  width: 350px;
+  cursor: not-allowed;
+}
+
+#resultado:focus {
+  outline: none;
+}
+
+.button {
+  cursor: pointer;
+  padding: 0.3rem 0.55rem;
+  width: fit-content;
 }
