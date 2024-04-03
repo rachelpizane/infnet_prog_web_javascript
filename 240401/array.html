@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Com array você pode armazenar vários valores em uma única variável.
+        // Você pode acessar os valores por meio de um índice.
+        // O índice começa em 0.
+        // Exemplo: 
+
+        let nome = [
+            "Rachel",
+            "Vitoria",
+            "Paulo",
+            "Lucas",
+            "Gabriel"
+        ];
+
+        console.log(nome[0], nome.length)
+
+        nome[nome.length - 1] = "Maria";
+        // 
+
+        let lista = ""
+
+        for (let i = 0; i < nome.length; i++) {
+            lista = lista + nome[i] + " - ";
+        }
+
+        console.log(lista)
+
+        pergunta = 2;
+        indice = pergunta - 1;
+        console.log(nome[indice])
+
+
+    </script>
+</body>
+
+</html>

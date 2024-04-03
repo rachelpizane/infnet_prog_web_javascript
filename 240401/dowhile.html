@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While</title>
+    <style>
+        #resultado {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="Clique aqui" id="buttom">
+    <input type="text" id="resultado" click="calcular()">
+    <script>
+        buttom = document.getElementById("buttom")
+
+        buttom.addEventListener('click', function Calculcar() {
+            let resultado = document.getElementById("resultado");
+
+            let i = 1;
+            let num = 1;
+            let listaNum = "";
+            let listaI = ""
+            do {
+                num = num * i;
+                listaI = listaI + i + ", ";
+                listaNum = listaNum + num + ", ";
+                i++
+            } while (i < 7)
+            resultado.value = listaI + " //\n " + listaNum;
+        })
+
+        let opcao
+        do {
+            opcao = parseInt(prompt(
+                "MENU\n" +
+                "1 - Verificar os dias da semana\n" +
+                "2 - Verificar os numeros de 1 a 10\n" +
+                "3 - Sair do programa\n\n"))
+
+            switch (opcao) {
+                case 1:
+                    alert("seg, ter, quar, quin, sex, sab, dom")
+                    break;
+                case 2:
+                    let listinha = ""
+                    for (let x = 1; x <= 10; x++) {
+                        listinha = listinha + x + " ";
+                    }
+                    alert(listinha);
+                    break;
+                case 3:
+                    alert("Que pena... Obrigada por ter vindo!!")
+            }
+        } while (opcao != 3);
+        alert("FIM")
+
+    </script>
+</body>
+
+</html>

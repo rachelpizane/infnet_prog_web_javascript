@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situação dos Alunos</title>
+</head>
+
+<body>
+    <script>
+        let nomeAluno = "Rachel";
+        let nomeDisciplina = "Javascript";
+        let qntProva = 3;
+
+        let notas = [];
+
+        for (let i = 0; i < qntProva; i++) {
+            // Versão detalhada
+            let nota = i + 2
+            notas.push(nota)
+            // Versão resumida: notas.push(i + 2);
+            console.log(notas[i])   
+        }
+
+        let soma = 0;
+        let media = 0;
+        for (let i = 0; i < notas.length; i++){
+            soma = soma + notas[i]
+            // i = 0 // soma = 0 + 2;
+            // i = 1 //soma = 2 + 3;
+            // i = 2 // soma = 5 + 4;
+        }
+
+        // soma = 9
+        media = soma / qntProva; // 9 / 3
+
+        console.log(media)
+
+        console.log(nomeAluno, nomeDisciplina, qntProva)
+
+
+        // VETOR
+        console.log("\n\nVETOR: ")
+        let diaSemana = ["dom", "seg", "ter", "quar", "quin", "sexta", "sab"]
+
+        diaSemana.push("weekend")
+        diaSemana.push("banana")
+
+        console.log(diaSemana.length, diaSemana[0], diaSemana[4], diaSemana[diaSemana.length - 1])
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>010424| Exercicio</title>
+</head>
+
+<body>
+    <script>
+        var funcionarios = [];
+        main();
+
+        function adicionarFuncionario() {
+            let nome = prompt("Nome: ");
+            let idade = parseInt(prompt("idade: "));
+
+            funcionarios.push({ nome, idade });
+        }
+
+        function exibirTodos() {
+            let lista = "";
+            for (let i = 0; i < funcionarios.length; i++) {
+                lista = lista + "FUNCIONARIO nº " + (i + 1) + "\nNome: " + funcionarios[i].nome + "\nIdade: " + funcionarios[i].idade + "\n\n";
+            }
+            alert(lista)
+        }
+
+        function exibirIndividual(){
+            indice = prompt("Qual indice você deseja visualizar? [1 - " + funcionarios.length + "]");
+                        
+            alert(
+                "FUNCIONARIO nº " + (indice) + 
+                "\nNome: " + funcionarios[indice - 1].nome + 
+                "\nIdade: " + funcionarios[indice - 1].idade + 
+                "\n\n"
+                );
+        }
+
+        function excluirFuncionario(){
+            indice =  prompt("Qual indice você deseja excluir? [1 - " + funcionarios.length + "]");
+                        
+            indice = indice - 1
+
+            alert("Funcionário(a) " + funcionarios[indice].nome + " excluido(a).");
+
+            funcionarios.splice(indice,1)
+        }
+
+        function main() {
+
+            let opcao = 0;
+            let indice = 0;
+
+            do {
+                opcao = parseInt(prompt(
+                    "MENU \n\n" +
+                    "1 - Adicionar um funcionário\n" +
+                    "2 - Exibir todos os funcionários\n" +
+                    "3 - Exibir um funcionário\n" +
+                    "4 - Retirar um funcionario\n" + 
+                    "7 - Sair do programa\n"));
+
+                switch (opcao) {
+                    case 1:
+                        adicionarFuncionario();
+                        alert("Funcionário(a) adicionado(a)!")
+                        break;
+                    case 2:
+                        exibirTodos();
+                        break;
+                    case 3:
+                        exibirIndividual();
+                        break;
+                    case 4:
+                        excluirFuncionario()
+                        break;
+                    case 7:
+                        alert("Você está saindo do programa.")
+                        break;
+                    default:
+
+                }
+
+            } while (opcao != 7);
+            alert("FIM!")
+        }
+
+    </script>
+</body>
+
+</html>
