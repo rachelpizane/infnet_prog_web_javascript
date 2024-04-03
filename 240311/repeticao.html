@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // REPITAÇÃO / LAÇOS
+        // "Enquanto a condição for verdadeira o laço continua"
+
+        // 1 - ESTRUTURA DE REPETIÇÃO COM TESTE LOGICO NO INICIO  
+        // Primeiro testa e executa
+
+        let pizza = 12
+        let i = 0;
+        
+        while (pizza != 0) { // Enquanto pizza nao for igual a zero, a condição repetirá
+            pizza = pizza - 1;
+            console.log(pizza)
+        }
+
+        // Para repetir algo até x vezes, podemos criar a condição abaixo:
+        i = 1
+
+        while (i <= 10) {
+            console.log(i + " Tudo bem?")
+            i++
+        }
+
+        //  2 - ESTRUTURA DE REPETIÇÃO COM TESTE LOGICO NO FINAL
+        // Outra forma é fazer primeiro o bloco e depois testar:
+        let c =  1;
+
+        do {
+            console.log(c + " Tudo sim e você?")
+            c++
+        } while (c <= 10)
+
+        //3 - ESTRUTURA DE REPETIÇÃO COM VARIAVEL DE CONTROLE
+        // for(inicio; teste; incremento){}
+        // se o teste for verdadeiro ele vai executar o bloco e ao repetir ele incrementa. 
+        // Porque essa estrutura foi criada?
+        
+        // 3 formas diferentes para o mesmo resultado/objetivo
+        console.log("Teste lógico no inicio") 
+        let b = 1
+        while(b <= 4){
+            console.log(b)
+            b++ // b = b + 1
+        }
+        //----------------------
+
+        console.log("Teste lógico no fim") 
+        b = 1;
+        do {
+            console.log(b)
+            b++
+        } while(b <= 4);
+        //----------------------
+
+        console.log("Variável de Controle") 
+        for(b = 1; b <= 4; b++){
+            console.log(b)
+        }
+
+    </script>
+</body>
+
+</html>
