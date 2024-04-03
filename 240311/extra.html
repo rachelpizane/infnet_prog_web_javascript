@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=script, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let auto = [5, 8, 4]; // auto = [] < -- vetor/array
+        // [0] = 5
+        // [1] = 8
+        // [2] = 4
+        // Como eu posso acrescentar um valor?
+        console.log(auto)
+        // 1º forma:
+        auto[3] = 6;
+        // auto = [5, 8, 4, 6] 
+        // + [3] = 6
+        console.log(auto)
+        //2ª forma:
+        auto.push(7);
+        // auto = [5, 8, 4, 6, 7] 
+        // + [4] = 7
+        console.log(auto)
+
+        // Como eu descubro o comprimento?
+
+        auto.length
+        // Ele conta do 0 até o ultimo, ou seja, um vetor com 3 valores possui um coprimento 5 e a ultima posição é o indice 2.
+        console.log("Comprimento:", auto.length)
+
+        console.log("\n")
+        // Como mostra-lo sem os colchetes?
+        for (let i = 0; i < auto.length; i++) {
+            console.log("A posição", i, "tem o valor", auto[i])
+        }
+
+        console.log("\n")
+        let lista = "";
+
+        for (i in auto) { // é a mesma coisa que let i = 0; i < auto.length; i++
+            lista = lista + auto[i] + " ";
+        }
+        console.log("Quantidade de automoveis: ", auto)
+        console.log("Quantidade de automoveis: ", lista)
+
+        // Como buscar valores dentro de um vetor?
+        
+        console.log(auto.indexOf(4)) // Tem o valor 4 no vetor auto? Tem sim, ele está na posição 2;
+        console.log(auto.indexOf(2)) // Tem o valor 2 no vetor auto? Hm.. não tem == -1
+
+        // utilizando IF
+        pos = auto.indexOf(2);
+        if(pos != -1){
+            console.log("O valor está na posição", pos)
+        } else {
+            console.log("Valor nao encontrado")
+        }
+
+        // let n = []
+        // let par = []
+        // let impar = []
+
+        // for (let i = 0; i < 4; i++) {
+        //     val = prompt("Escreva um valor: ")
+        //     n.push(val)
+
+        //     if (n[i] % 2 == 0) {
+        //         par.push(n[i])
+        //         n.indexOf[i]
+        //     } else {
+        //         impar.push(val)
+        //     }
+        // }
+
+        // for (let i = 0; i < n.length; i++) {
+
+        // }
+
+        // console.log("Par: " + par)
+        // console.log("Impar: " + impar)
+
+
+    </script>
+</body>
+
+</html>
